@@ -1,14 +1,19 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static(__dirname + "/public/"))
 
 app.get('/', (req, res) => {
-	res.send('Hello, Express server is running!');
+	res.sendFile(__dirname+"/views/tech.html");
 });
 
 app.listen(PORT, () => {
