@@ -548,14 +548,14 @@
     </section>
     <section class="contact-section" aria-labelledby="contact-title">
       <h2 class="contact-title" id="contact-title">Contact Us</h2>
-      <form class="contact-form" id="contactForm" autocomplete="off" novalidate>
+      <form class="contact-form"  action="/form" method="POST" id="contactForm" autocomplete="off" novalidate>
         <div class="form-group">
-          <label for="name" class="form-label">NAME</label>
+          <label for="name" class="form-label">NAME <span style="color: red;">*</span></label>
           <input type="text" id="name" name="name" class="form-input" required tabindex="1" aria-required="true">
           <div class="form-error" id="nameError"></div>
         </div>
         <div class="form-group">
-          <label for="email" class="form-label">Email</label>
+          <label for="email" class="form-label">Email <span style="color: red;">*</span></label>
           <input type="email" id="email" name="email" class="form-input" required tabindex="2" aria-required="true">
           <div class="form-error" id="emailError"></div>
         </div>
@@ -565,7 +565,7 @@
           <div class="form-error" id="phoneError"></div>
         </div>
         <div class="form-group">
-          <label for="message" class="form-label">MESSAGE</label>
+          <label for="message" class="form-label">MESSAGE <span style="color: red;">*</span></label>
           <textarea id="message" name="message" class="form-textarea" required tabindex="4" aria-required="true"></textarea>
           <div class="form-error" id="messageError"></div>
         </div>
@@ -620,9 +620,6 @@
       const email = this.email.value.trim();
       if (!email) { setError('emailError', 'Email is required.'); valid = false; }
       else if (!/^\S+@\S+\.\S+$/.test(email)) { setError('emailError', 'Enter a valid email.'); valid = false; } else { clearError('emailError'); }
-      // Phone (optional, but basic format)
-      const phone = this.phone.value.trim();
-      if (phone && !/^\+?[0-9\-\s]{7,}$/.test(phone)) { setError('phoneError', 'Enter a valid phone number.'); valid = false; } else { clearError('phoneError'); }
       // Message
       const message = this.message.value.trim();
       if (!message) { setError('messageError', 'Message is required.'); valid = false; } else { clearError('messageError'); }
