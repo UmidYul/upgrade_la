@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teacher & About Us</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; padding: 0; font-family: 'Poppins', 'Inter', Arial, sans-serif; background: #fff; }
+    main { width: 100%; }
+    .section {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2.5rem 2rem;
+      box-sizing: border-box;
+      min-width: 280px;
+    }
+    .teacher-section {
+      background: #0B3772;
+      color: #fff;
+    }
+    .teacher-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      max-width: 1200px;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+    .teacher-left {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 1.5rem;
+      min-width: 280px;
+    }
+    .teacher-name {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.5rem;
+      letter-spacing: 1px;
+    }
+    .group-name {
+      font-size: 1.1rem;
+      color: #e0e0e0;
+      font-weight: 500;
+      margin-bottom: 1.2rem;
+      letter-spacing: 0.5px;
+    }
+    .teacher-text {
+      background: #e0e0e0;
+      color: #0B3772;
+      border-radius: 12px;
+      min-height: 100px;
+      min-width: 280px;
+      width: 100%;
+      max-width: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-align: center;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 12px rgba(11,55,114,0.10);
+      transition: box-shadow 0.18s;
+    }
+    .teacher-text:hover, .teacher-text:focus {
+      box-shadow: 0 4px 24px rgba(11,55,114,0.18);
+    }
+    .teacher-right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 280px;
+    }
+    .teacher-image {
+      background: #e0e0e0;
+      color: #0B3772;
+      border-radius: 12px;
+      min-height: 220px;
+      min-width: 220px;
+      width: 100%;
+      max-width: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-align: center;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 12px rgba(11,55,114,0.10);
+      transition: box-shadow 0.18s;
+    }
+    .teacher-image:hover, .teacher-image:focus {
+      box-shadow: 0 4px 24px rgba(11,55,114,0.18);
+    }
+    /* About Us Section */
+    .about-section {
+      background: #fff;
+      color: #0B3772;
+    }
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      max-width: 1200px;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+    .about-title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #0B3772;
+      margin-bottom: 2rem;
+      letter-spacing: 1px;
+    }
+    .about-left {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 1.2rem;
+      min-width: 280px;
+    }
+    .about-subtitle {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #0B3772;
+      margin-bottom: 0.7rem;
+      letter-spacing: 0.5px;
+    }
+    .about-text {
+      background: #e0e0e0;
+      color: #0B3772;
+      border-radius: 12px;
+      min-height: 100px;
+      min-width: 280px;
+      width: 100%;
+      max-width: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-align: center;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 12px rgba(11,55,114,0.10);
+      transition: box-shadow 0.18s;
+    }
+    .about-text:hover, .about-text:focus {
+      box-shadow: 0 4px 24px rgba(11,55,114,0.18);
+    }
+    .about-right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 280px;
+    }
+    .about-image {
+      background: #e0e0e0;
+      color: #0B3772;
+      border-radius: 12px;
+      min-height: 220px;
+      min-width: 220px;
+      width: 100%;
+      max-width: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-align: center;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 12px rgba(11,55,114,0.10);
+      transition: box-shadow 0.18s;
+    }
+    .about-image:hover, .about-image:focus {
+      box-shadow: 0 4px 24px rgba(11,55,114,0.18);
+    }
+    /* Responsive */
+    @media (max-width: 900px) {
+      .teacher-content, .about-content {
+        gap: 1rem;
+        max-width: 98vw;
+      }
+      .teacher-text, .about-text {
+        max-width: 98vw;
+      }
+      .teacher-image, .about-image {
+        max-width: 98vw;
+      }
+    }
+    @media (max-width: 768px) {
+      .teacher-content, .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .section {
+        padding: 2rem 1rem;
+      }
+      .teacher-left, .teacher-right, .about-left, .about-right {
+        min-width: 90vw;
+        width: 90vw;
+        max-width: 98vw;
+      }
+      .teacher-text, .about-text, .teacher-image, .about-image {
+        min-width: 90vw;
+        max-width: 98vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="section teacher-section">
+      <div class="teacher-content">
+        <div class="teacher-left">
+          <div class="teacher-name">Teacher Name</div>
+          <div class="group-name">Group Name (IELTS, CEFR)</div>
+          <div class="teacher-text" tabindex="0">Text Here</div>
+        </div>
+        <div class="teacher-right">
+          <div class="teacher-image" tabindex="0">TEACHER IMAGE</div>
+        </div>
+      </div>
+    </section>
+    <section class="section about-section">
+      <div class="about-title">About Us</div>
+      <div class="about-content">
+        <div class="about-left">
+          <div class="about-subtitle">Upgrade LA</div>
+          <div class="about-text" tabindex="0">Some TEXT Here ABOUT COMPANY</div>
+        </div>
+        <div class="about-right">
+          <div class="about-image" tabindex="0">I DON'T KNOW MAYBE ALSO IMAGE</div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

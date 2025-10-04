@@ -1,0 +1,208 @@
+  body {
+      font-family: Arial, sans-serif;
+      background: #f9fafb;
+      margin: 0;
+      /* padding: 40px; */
+    }
+    .pricing-section {
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+    }
+    .pricing-section h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s;
+      min-height: 500px;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+    .card p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+    .features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px 0;
+      text-align: left;
+    }
+    .features li {
+      margin-bottom: 10px;
+    }
+    .price {
+      font-size: 26px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .lessons {
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+    .btn {
+      background: #0B3772;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+      width: 100%;
+    }
+    .btn:hover {
+      background: #1d4ed8;
+    }
+    .links {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    .links a {
+      margin: 0 10px;
+      color: #0B3772;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    .highlight {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.28);
+}
+
+
+.navbar {
+    width: 100%;
+    background: #0B3772;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    height: 64px;
+    box-sizing: border-box;
+    /* margin-bottom: 32px; */
+  }
+  .navbar-logo img {
+    height: 40px;
+  }
+  .navbar-menu {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar-menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  .navbar-menu li a:hover {
+    color: #ffd700;
+  }
+  .navbar-action {
+    display: flex;
+    align-items: center;
+  }
+  .apply-btn {
+    background: #ffd700;
+    color: #0B3772;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .apply-btn:hover {
+    background: #fff;
+  }
+
+   .site-header {
+    background: #0B3772;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+  .header-left {
+    flex: 1 1 400px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    min-width: 320px;
+  }
+  .header-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 18px;
+    color: #fff;
+    line-height: 1.1;
+  }
+  .header-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 32px;
+    color: #fff;
+    opacity: 0.85;
+  }
+  .header-btn {
+    background: #fff;
+    color: #0B3772;
+    border: none;
+    border-radius: 24px;
+    padding: 14px 36px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    transition: background 0.2s, color 0.2s;
+  }
+  .header-btn:hover {
+    background: #ffd700;
+    color: #0B3772;
+  }
+  .header-right {
+    flex: 1 1 320px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    min-width: 220px;
+  }
+  .header-img {
+    max-width: 320px;
+    width: 100%;
+  }
