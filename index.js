@@ -12,6 +12,7 @@ const bot = new Telegraf('8637705357:AAF0byJLaZpt_bl3n6iCeZF-tAAvGyxztuI');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use('/public', express.static(__dirname + '/public'));
 
 app.get('/', (req, res) => {
 	res.sendFile(__dirname + '/views/main.html');
