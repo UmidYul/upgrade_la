@@ -8,7 +8,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-const bot = new Telegraf('8302681013:AAGjxusG2zhbM8_hguH4mj5L2-BFaDN8S7Y');
+const bot = new Telegraf('8637705357:AAF0byJLaZpt_bl3n6iCeZF-tAAvGyxztuI');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
