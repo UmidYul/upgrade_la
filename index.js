@@ -12,33 +12,29 @@ const bot = new Telegraf('8302681013:AAGjxusG2zhbM8_hguH4mj5L2-BFaDN8S7Y');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(__dirname + "/public/"))
 
 app.get('/', (req, res) => {
-	res.sendFile(__dirname+"/views/main.html");
+	res.sendFile(__dirname + '/views/main.html');
 });
 
-app.get('/main', (req, res) => {
-	res.sendFile(__dirname+"/views/main.html");
+app.post('/form', async (req, res) => {
+	const { name, email, message, phone } = req.body;
+	try {
+		await bot.telegram.sendMessage(8176192068, `
+<b>📋 Новая заявка — Upgrade LA</b>
+
+<b>Имя:</b> ${name || '-'}
+<b>Email:</b> ${email || '-'}
+<b>Телефон:</b> ${phone || '-'}
+<b>Сообщение:</b>
+<blockquote>${message || '-'}</blockquote>
+		`, { parse_mode: 'HTML' });
+		res.json({ ok: true });
+	} catch (err) {
+		console.error('Telegram error:', err.message);
+		res.status(500).json({ ok: false, error: 'Ошибка отправки' });
+	}
 });
-
-app.post('/form', (req, res) => {
-	const{name, email, message,phone} = req.body;
-	  bot.telegram.sendMessage(8176192068, `
-<b>📋 New Application!:</b>
-
-<b>Name:</b>
-${name || "-"}
-<b>Email:</b>
-${email || "-"}
-<b>Phone:</b>
-${phone || "-"}
-<b>Message:</b>
-<blockquote>${message || "-"}</blockquote>
-        `, {
-            parse_mode: "HTML"
-        });
-})
 
 app.listen(PORT, () => {
 	console.log(`http://localhost:${PORT}`);
